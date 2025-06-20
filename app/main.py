@@ -4,10 +4,6 @@ from app.core.config import LOG_FORMAT
 from app.core.csv_helper import CSVHelper
 from app.core.parser import Parser
 
-# from pathlib import Path
-# sys.path.append(str(Path(__file__).parent.parent))
-
-
 log = logging.getLogger(__name__)
 
 
