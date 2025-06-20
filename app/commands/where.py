@@ -4,18 +4,16 @@ log = logging.getLogger(__name__)
 
 
 def filter_data(
-    data: list[dict[str, str | int | float]],
+    data: list[dict[str, str]],
     column: str,
     operator: str,
     value: str,
-) -> list[dict[str:str]]:
-
+) -> list[dict[str, str]]:
     operations = {
         ">": lambda a, b: a > b,
         "<": lambda a, b: a < b,
         "=": lambda a, b: a == b,
     }
-
     try:
         value = float(value)
         converter = float
