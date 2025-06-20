@@ -12,7 +12,7 @@ class CSVHelper:
     """
 
     @staticmethod
-    def load(args: Namespace) -> list[dict[str:str]]:
+    def load(args: Namespace) -> list[dict[str, str]]:
         try:
             with open(file=args.file, mode="r", encoding="utf-8") as file:
                 return list(csv.DictReader(file))

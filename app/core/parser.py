@@ -63,7 +63,7 @@ class Parser:
         print(tabulate(data, headers=headers, tablefmt="grid"))
 
     @staticmethod
-    def _custom_error_handler(message) -> None:
+    def _custom_error_handler(message: str) -> None:
         """
         Кастомный обработчик ошибок argparse, на случай, если ввели неверный флаг,
         допустим не --where, а --wheha, сравнивая флаг с допустимыми в Enum
