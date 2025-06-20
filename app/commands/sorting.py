@@ -6,10 +6,10 @@ log = logging.getLogger(__name__)
 
 
 def sort_data(
-    data: list[dict],
+    data: list[dict[str, str]],
     column: str,
     direction: str,
-) -> list[dict] | None:
+) -> list[dict[str, str]] | None:
 
     try:
         direction = SortingDirection(direction.strip().lower())
@@ -26,3 +26,4 @@ def sort_data(
         )
     except KeyError:
         log.error("Колонка '%s' не найдена для сортировки", column)
+

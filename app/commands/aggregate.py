@@ -6,7 +6,7 @@ from app.enums import AggregationFunc
 log = logging.getLogger(__name__)
 
 
-def aggregate(data: dict[str:str], column: str, operator: str) -> int | float | None:
+def aggregate(data: dict[str:str], column: str, operator: str) -> float | None:
 
     try:
         AggregationFunc(operator)
